@@ -30,6 +30,7 @@ ARG TORCH_DISTRO_COMMIT=831d273a572abbbf02904b6299a5f9a7bc2c3902
 RUN git clone https://github.com/torch/distro.git ~/torch --recursive \
  && cd ~/torch \
  && git checkout "$TORCH_DISTRO_COMMIT" \
+ && bash install-deps 
  && ./install.sh
 
 # Export environment variables manually
